@@ -13,6 +13,9 @@ body {
     font-size: 2rem;
     padding: 4rem;
     font-family: 'Inter', sans-serif;
+    background-image: url(./Pixel.png);
+    background-position: center;
+    background-size: contain;
 }
 
 .main {

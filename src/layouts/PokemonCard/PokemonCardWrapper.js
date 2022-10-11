@@ -6,7 +6,7 @@ const PokemonCardWrapper = (props) => {
         <section className="pokemonCardWrapper">
 
             <PokemonCard
-                pokemonName="Krokoodile"
+                pokemonName="Krookodile"
                 pokemonType={["ground", "dark"]}
                 pokemonImage="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/553.png"
                 pokemonHP="95"

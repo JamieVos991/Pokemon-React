@@ -3,6 +3,7 @@
     height: 50rem;
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
     padding: 2rem;
+    background: rgb(212, 212, 212);
 }   
 
 .pokemonCard, .pokemonCard * {

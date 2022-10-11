@@ -80,6 +80,11 @@
     text-transform: capitalize;
 }
 
+.pokemonCard__type--ice {
+    background: #6cf;
+    text-transform: capitalize;
+}
+
 .pokemonCard__section {
     height: 70%;
 }

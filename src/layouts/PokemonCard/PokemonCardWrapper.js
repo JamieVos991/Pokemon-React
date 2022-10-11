@@ -22,10 +22,10 @@ const PokemonCardWrapper = (props) => {
             />
 
             <PokemonCard
-                pokemonName="Leafeon"
-                pokemonType={["grass"]}
-                pokemonImage="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/470.png"
-                pokemonHP="65"
+                pokemonName="Abomasnow"
+                pokemonType={["grass", "ice"]}
+                pokemonImage="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/460.png"
+                pokemonHP="90"
                 updateCounter={props.updateCounter}
             />
 

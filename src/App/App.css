@@ -11,7 +11,14 @@ html {
 
 body {
     font-size: 2rem;
+    padding: 4rem;
     font-family: 'Inter', sans-serif;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #root {

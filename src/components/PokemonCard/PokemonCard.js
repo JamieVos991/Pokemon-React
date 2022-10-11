@@ -4,7 +4,7 @@ import "./PokemonCard.css";
 class PokemonCard extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { hp: 0, caught: false }
+        this.state = { hp: 0, caughtOrRan: false }
     }
 
     componentDidMount() {
@@ -13,32 +13,35 @@ class PokemonCard extends React.Component {
 
     attack = () => {
         let randomNumber = Math.floor(Math.random() * (30 - 1) + 1);
-        console.log(randomNumber);
         this.setState({
             hp: this.state.hp - randomNumber
         }, function () {
             if (this.state.hp <= 0) {
-                console.log("Dood!");
                 this.setState({
-                    hp: 0
+                    hp: 0,
+                    caughtOrRan: true,
                 })
             }
         })
-
-        console.log("Attack!");
     }
 
-    catch = () => {
-        console.log("Catch");
+    catch = () => { 
+        this.setState({caughtOrRan: true});
+        let damagePercentage = 100 - Math.floor( + this.state.hp / this.props.pokemonHP * 100);
+        let dice =  Math.floor(Math.random() * (100 - 1) + 1);
+        if(damagePercentage > dice){
+            this.props.updateCounter();
+        }
+
     }
 
     render() {
         let types = this.props.pokemonType.map(function (type) {
-            return <span className={`pokemonCard__type pokemonCard__type--${type}`}>{type}</span>
+            return <span key={type} className={`pokemonCard__type pokemonCard__type--${type}`}>{type}</span>
         });
 
         let Buttons = null;
-        if (this.state.caught === false) {
+        if (this.state.caughtOrRan === false) {
             Buttons =
                 <>
                     <button onClick={this.attack} className="pokemonCard__button pokemonCard__button--attack">Attack</button>

@@ -1,9 +1,9 @@
 import "./CounterCard.css";
 
-const CounterCard = () => {
+const CounterCard = ({counter}) => {
     return(
         <section className="counterCard">
-            <h2 className="counterCard__h2">0</h2>
+            <h2 className="counterCard__h2">{counter}</h2>
         </section>
     );
 }

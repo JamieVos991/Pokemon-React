@@ -7,9 +7,22 @@
     align-items: center;
     width: 50%;
     height: 102rem;
+    background: white;
 }
 
 .counterCard__h2 {
     font-size: 800%;
     font-weight: 400;
+}
+
+@media screen and (max-width: 62.5rem) {
+    .counterCard {
+       position: fixed;
+       top: 2rem;
+       right: 2rem;
+       width: 14rem;
+       font-size: 50%;
+       height: 14rem;
+       border-radius: 50%;
+    }
 }
